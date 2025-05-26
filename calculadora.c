@@ -10,7 +10,8 @@ int main() {
     printf("2. Restar\n");
     printf("3. Multiplicar\n");
     printf("4. DIvidir\n");
-    printf("Elige una opcion: 1-4");
+    printf("Elige una opcion: 1-4:\n");
+    printf("Introduce una opcion: ");
     scanf("%d", &opcion);
 
     if (opcion == 1) {
