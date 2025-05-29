@@ -87,14 +87,15 @@ void encontrarOracionMasLarga(const char *cadena){
     
 
 //mostrar la oracion mas larga y su cantidad de palabras
-printf ("oracion mas larga:\n");
+printf("oracion mas larga:\n");
     for (int i=0; oracionMasLarga[i] !='\0' && oracionMasLarga{i}!= '.');
         if (oracionMasLarga[i]=='_'){
         printf(" ");
         } else {
         printf("%c", oracionMasLarga[i]);
         }
-}
+    }
+    printf(".\n");
     printf("\nCantidad de palabras: %d\n\n", maxPalabras);
     printf("\n");
       
