@@ -3,16 +3,19 @@
 
 int main(){
 
-    char a[] = "hola";
-    char b[] = "hola";
-    char c[] = "mundo";
+  char palabra1[50], palabra2[50];
+    printf("Ingrese la primera palabra:");
+    scanf("%s", palabra1);
+    palabra1[strcspn(palabra1, "\n")]='\0'; // Eliminar el salto de línea
 
-    if (strcmp(a,b)==0){
-        printf("las cadenas son iguales\n");
-    }
+    printf("Ingrese la sgunda palabra:");
+    scanf("%s", palabra2);
+    palabra2[strcspn(palabra2, "\n")]='\0'; // Eliminar el salto de línea
 
-    if (strcmp(a,c)!=0){
-        printf("las cadenas son diferentes\n");
+    if (strcmp(palabra1, palabra2)==0){
+        printf("las palabras son iguales\n");
+    }else{
+        printf("Las palabras son diferentes\n");
     }
     return 0;
 }
