@@ -50,6 +50,15 @@ void imprimirLista(struct Nodo* cabeza) {
     }
     printf("NULL\n");
 }
+//funcion para insertar un nodo en el medio de la lista
+void insertarMedio(struct Nodo** cabeza, int valor, int posicion){
+    struct Nodo* nuevo = crearNodo(valor);
+    if (*cabeza == NULL || posicion <= 0) {
+        nuevo->siguiente = *cabeza;
+        *cabeza = nuevo;
+        return;
+    }
+}
 
 // Función para liberar la memoria de la lista
 void liberarLista(struct Nodo* cabeza) {
@@ -70,6 +79,7 @@ int main() {
         printf("2. Mostrar lista\n");
         printf("3. Salir\n");
         printf("4. Insertar primero\n");
+        printf("5. Insertar en el medio\n");
         printf("Seleccione una opcion: ");
         scanf("%d", &opcion);
         switch (opcion) {
@@ -90,6 +100,10 @@ int main() {
                 scanf("%d", &valor);
                 insertarPrimero(&lista, valor);
                 break;
+            case 5: {
+                int medio;
+                printf("Ingrese el valor del nodo a insertar:");
+                scanf("%d", &valor);
             default:
                 printf("Opcion invalida.\n");
         }
